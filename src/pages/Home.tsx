@@ -155,6 +155,9 @@ export default function Home() {
   const scrollContainerRef = React.useRef<HTMLDivElement>(null);
   const missionRef = React.useRef<HTMLDivElement>(null);
   const glowRef = React.useRef<HTMLDivElement>(null);
+  const glowRef2 = React.useRef<HTMLDivElement>(null);
+  const glowRef3 = React.useRef<HTMLDivElement>(null);
+  const auraRef = React.useRef<HTMLDivElement>(null);
   const missionBgRef = React.useRef<HTMLDivElement>(null);
   const mousePos = React.useRef({ x: 50, y: 50 });
   const targetPos = React.useRef({ x: 50, y: 50 });
@@ -177,23 +180,53 @@ export default function Home() {
     }
   };
 
-  // Ultra-smooth glowing orb + background mask follow via requestAnimationFrame
+  // Premium multi-layered glow + background mask follow via requestAnimationFrame
   useEffect(() => {
     let running = true;
+    let time = 0;
     const animate = () => {
       if (!running) return;
-      mousePos.current.x += (targetPos.current.x - mousePos.current.x) * 0.08;
-      mousePos.current.y += (targetPos.current.y - mousePos.current.y) * 0.08;
+      time += 0.016;
+      const lerp = 0.06;
+      mousePos.current.x += (targetPos.current.x - mousePos.current.x) * lerp;
+      mousePos.current.y += (targetPos.current.y - mousePos.current.y) * lerp;
+
+      const mx = mousePos.current.x;
+      const my = mousePos.current.y;
+
+      // Primary large soft glow
       if (glowRef.current) {
-        glowRef.current.style.transform = `translate(${mousePos.current.x}px, ${mousePos.current.y}px) translate(-50%, -50%)`;
+        const breathe = 1 + Math.sin(time * 1.5) * 0.06;
+        glowRef.current.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%) scale(${breathe})`;
       }
+      // Secondary tighter blue glow
+      if (glowRef2.current) {
+        const lagX = mx + (targetPos.current.x - mx) * 0.3;
+        const lagY = my + (targetPos.current.y - my) * 0.3;
+        glowRef2.current.style.transform = `translate(${lagX}px, ${lagY}px) translate(-50%, -50%)`;
+      }
+      // Tertiary ambient warm glow
+      if (glowRef3.current) {
+        const lagX = mx - (targetPos.current.x - mx) * 0.2;
+        const lagY = my - (targetPos.current.y - my) * 0.2;
+        const breathe = 1 + Math.cos(time * 1.2) * 0.1;
+        glowRef3.current.style.transform = `translate(${lagX}px, ${lagY}px) translate(-50%, -50%) scale(${breathe})`;
+      }
+      // Aura ring
+      if (auraRef.current) {
+        const breathe = 1 + Math.sin(time * 2) * 0.04;
+        auraRef.current.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%) scale(${breathe})`;
+      }
+      // Background mask reveal
       if (missionBgRef.current) {
-        const mx = Math.round(mousePos.current.x);
-        const my = Math.round(mousePos.current.y);
-        const mask = `radial-gradient(circle 300px at ${mx}px ${my}px, black 0%, transparent 75%)`;
+        const rmx = Math.round(mx);
+        const rmy = Math.round(my);
+        const pulse = 360 + Math.sin(time * 2) * 40;
+        const mask = `radial-gradient(circle ${pulse}px at ${rmx}px ${rmy}px, black 0%, transparent 80%)`;
         missionBgRef.current.style.maskImage = mask;
         missionBgRef.current.style.webkitMaskImage = mask;
       }
+
       rafId.current = requestAnimationFrame(animate);
     };
     rafId.current = requestAnimationFrame(animate);
@@ -463,13 +496,13 @@ export default function Home() {
         </Dialog>
       </section>
 
-      {/* Mission Section — Apple-style dark card with mouse-reveal background */}
+      {/* Mission Section — Premium mouse-reveal background with multi-layered glow */}
       <section
         ref={missionRef}
         className="relative py-24 md:py-32 overflow-hidden bg-[#0d0d0d]"
         onMouseMove={handleMissionMouseMove}
       >
-        {/* Background coding image — revealed by radial mask following mouse */}
+        {/* Background coding image — revealed by breathing radial mask following mouse */}
         <div
           ref={missionBgRef}
           className="absolute inset-0 z-0 pointer-events-none"
@@ -477,27 +510,71 @@ export default function Home() {
             backgroundImage: 'url(https://miaoda-conversation-file.s3cdn.medo.dev/user-cawzjr40f9xc/app-cbcy2gncy0ox/20260614/codgggg).png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            opacity: 0.45,
-            maskImage: 'radial-gradient(circle 320px at 50% 50%, black 0%, transparent 75%)',
-            WebkitMaskImage: 'radial-gradient(circle 320px at 50% 50%, black 0%, transparent 75%)',
+            opacity: 0.5,
+            maskImage: 'radial-gradient(circle 360px at 50% 50%, black 0%, transparent 85%)',
+            WebkitMaskImage: 'radial-gradient(circle 360px at 50% 50%, black 0%, transparent 85%)',
           }}
         />
-        {/* Dark overlay for readability */}
-        <div className="absolute inset-0 z-[1] bg-[#0d0d0d]/65 pointer-events-none" />
-        {/* Glowing orb that follows cursor with rAF smoothness */}
+        {/* Deep dark overlay for readability */}
+        <div className="absolute inset-0 z-[1] bg-[#0d0d0d]/60 pointer-events-none" />
+
+        {/* Premium multi-layered glow system */}
+        {/* Layer 1: Large ambient blue-purple glow */}
         <div
           ref={glowRef}
           className="pointer-events-none absolute top-0 left-0 z-[2]"
           style={{
-            width: 500,
-            height: 500,
+            width: 600,
+            height: 600,
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(41,151,255,0.28) 0%, rgba(191,90,242,0.18) 35%, rgba(255,55,95,0.06) 70%, transparent 100%)',
-            filter: 'blur(40px)',
+            background: 'radial-gradient(circle, rgba(41,151,255,0.22) 0%, rgba(120,80,255,0.14) 30%, rgba(191,90,242,0.08) 55%, transparent 75%)',
+            filter: 'blur(50px)',
             mixBlendMode: 'screen',
             willChange: 'transform',
           }}
         />
+        {/* Layer 2: Tighter cyan-white core glow */}
+        <div
+          ref={glowRef2}
+          className="pointer-events-none absolute top-0 left-0 z-[3]"
+          style={{
+            width: 280,
+            height: 280,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(100,210,255,0.35) 0%, rgba(41,151,255,0.18) 40%, transparent 70%)',
+            filter: 'blur(24px)',
+            mixBlendMode: 'screen',
+            willChange: 'transform',
+          }}
+        />
+        {/* Layer 3: Warm ambient offset glow */}
+        <div
+          ref={glowRef3}
+          className="pointer-events-none absolute top-0 left-0 z-[2]"
+          style={{
+            width: 450,
+            height: 450,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(255,149,0,0.10) 0%, rgba(255,100,50,0.06) 40%, transparent 70%)',
+            filter: 'blur(60px)',
+            mixBlendMode: 'screen',
+            willChange: 'transform',
+          }}
+        />
+        {/* Layer 4: Subtle aura ring */}
+        <div
+          ref={auraRef}
+          className="pointer-events-none absolute top-0 left-0 z-[3]"
+          style={{
+            width: 180,
+            height: 180,
+            borderRadius: '50%',
+            border: '1px solid rgba(100,210,255,0.15)',
+            boxShadow: '0 0 30px rgba(41,151,255,0.10), inset 0 0 30px rgba(41,151,255,0.05)',
+            willChange: 'transform',
+          }}
+        />
+
         <div className="max-w-[980px] mx-auto px-6 text-center relative z-10">
           <ScrollReveal>
             <p className="text-[13px] font-semibold uppercase tracking-wider text-[#ff9500] mb-4">

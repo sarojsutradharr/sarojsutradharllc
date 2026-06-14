@@ -136,4 +136,45 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  /* Premium mission glow animations */
+  @keyframes missionMaskBreathe {
+    0%, 100% {
+      mask-size: 100% 100%;
+      -webkit-mask-size: 100% 100%;
+    }
+    50% {
+      mask-size: 110% 110%;
+      -webkit-mask-size: 110% 110%;
+    }
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      opacity: 0.6;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      opacity: 0.9;
+      transform: translate(-50%, -50%) scale(1.08);
+    }
+  }
+
+  @keyframes glowRotate {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
 }
