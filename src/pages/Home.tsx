@@ -518,8 +518,8 @@ export default function Home() {
         {/* Deep dark overlay for readability */}
         <div className="absolute inset-0 z-[1] bg-[#0d0d0d]/60 pointer-events-none" />
 
-        {/* Premium multi-layered glow system */}
-        {/* Layer 1: Large ambient blue-purple glow */}
+        {/* Premium orange glow system */}
+        {/* Layer 1: Large ambient warm orange glow */}
         <div
           ref={glowRef}
           className="pointer-events-none absolute top-0 left-0 z-[2]"
@@ -527,50 +527,50 @@ export default function Home() {
             width: 600,
             height: 600,
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(41,151,255,0.22) 0%, rgba(120,80,255,0.14) 30%, rgba(191,90,242,0.08) 55%, transparent 75%)',
-            filter: 'blur(50px)',
-            mixBlendMode: 'screen',
-            willChange: 'transform',
-          }}
-        />
-        {/* Layer 2: Tighter cyan-white core glow */}
-        <div
-          ref={glowRef2}
-          className="pointer-events-none absolute top-0 left-0 z-[3]"
-          style={{
-            width: 280,
-            height: 280,
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(100,210,255,0.35) 0%, rgba(41,151,255,0.18) 40%, transparent 70%)',
-            filter: 'blur(24px)',
-            mixBlendMode: 'screen',
-            willChange: 'transform',
-          }}
-        />
-        {/* Layer 3: Warm ambient offset glow */}
-        <div
-          ref={glowRef3}
-          className="pointer-events-none absolute top-0 left-0 z-[2]"
-          style={{
-            width: 450,
-            height: 450,
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(255,149,0,0.10) 0%, rgba(255,100,50,0.06) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(255,149,0,0.30) 0%, rgba(255,100,0,0.18) 30%, rgba(200,80,0,0.08) 55%, transparent 75%)',
             filter: 'blur(60px)',
             mixBlendMode: 'screen',
             willChange: 'transform',
           }}
         />
-        {/* Layer 4: Subtle aura ring */}
+        {/* Layer 2: Tighter bright orange-amber core glow */}
+        <div
+          ref={glowRef2}
+          className="pointer-events-none absolute top-0 left-0 z-[3]"
+          style={{
+            width: 260,
+            height: 260,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(255,180,60,0.45) 0%, rgba(255,130,0,0.25) 40%, transparent 70%)',
+            filter: 'blur(28px)',
+            mixBlendMode: 'screen',
+            willChange: 'transform',
+          }}
+        />
+        {/* Layer 3: Deep amber offset glow */}
+        <div
+          ref={glowRef3}
+          className="pointer-events-none absolute top-0 left-0 z-[2]"
+          style={{
+            width: 480,
+            height: 480,
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(255,120,0,0.14) 0%, rgba(200,60,0,0.08) 40%, transparent 70%)',
+            filter: 'blur(70px)',
+            mixBlendMode: 'screen',
+            willChange: 'transform',
+          }}
+        />
+        {/* Layer 4: Orange aura ring */}
         <div
           ref={auraRef}
           className="pointer-events-none absolute top-0 left-0 z-[3]"
           style={{
-            width: 180,
-            height: 180,
+            width: 170,
+            height: 170,
             borderRadius: '50%',
-            border: '1px solid rgba(100,210,255,0.15)',
-            boxShadow: '0 0 30px rgba(41,151,255,0.10), inset 0 0 30px rgba(41,151,255,0.05)',
+            border: '1.5px solid rgba(255,160,40,0.20)',
+            boxShadow: '0 0 40px rgba(255,140,0,0.15), inset 0 0 40px rgba(255,140,0,0.08)',
             willChange: 'transform',
           }}
         />
