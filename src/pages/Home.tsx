@@ -549,52 +549,60 @@ export default function Home() {
         <div className="max-w-[720px] mx-auto px-6">
           <ScrollReveal className="text-center mb-12">
             <h2 className="text-[32px] md:text-[40px] font-semibold tracking-tight text-foreground">
-              Why People Trust Me
+              FAQ
             </h2>
             <p className="mt-4 text-[15px] md:text-[17px] text-muted-foreground leading-relaxed max-w-lg mx-auto">
-              I am an entrepreneur dedicated to creating beautiful products that help people improve their day-to-day activities.
+              Common questions about my work, process, and how I approach building products.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1" className="bg-white rounded-[14px] border border-black/5 px-5 mb-3">
                 <AccordionTrigger className="text-[15px] font-medium text-foreground hover:no-underline py-5">
-                  What kind of products do you build?
+                  What technologies do you use to build products?
                 </AccordionTrigger>
                 <AccordionContent className="text-[14px] text-muted-foreground leading-relaxed pb-5">
-                  I build SaaS products and productivity tools designed to solve real-world problems. Every product starts with understanding user pain points and ends with software that genuinely improves daily workflows.
+                  I primarily work with React, TypeScript, and modern frontend frameworks like Next.js for web products. For backend and data, I use Supabase, Node.js, and cloud services. I choose the right stack for each product — performance, scalability, and maintainability always come first.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2" className="bg-white rounded-[14px] border border-black/5 px-5 mb-3">
                 <AccordionTrigger className="text-[15px] font-medium text-foreground hover:no-underline py-5">
-                  How do you approach product development?
+                  How long does it take to build a product from idea to launch?
                 </AccordionTrigger>
                 <AccordionContent className="text-[14px] text-muted-foreground leading-relaxed pb-5">
-                  My approach is user-first. I identify real problems, validate solutions through research and prototyping, design intuitive experiences, build with clean scalable architecture, and continuously iterate based on feedback.
+                  It depends on the scope. A focused MVP typically takes 4 to 8 weeks from concept to first users. I break work into weekly milestones with clear deliverables — design first, build fast, and iterate based on real user feedback. Speed matters, but never at the cost of quality.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3" className="bg-white rounded-[14px] border border-black/5 px-5 mb-3">
                 <AccordionTrigger className="text-[15px] font-medium text-foreground hover:no-underline py-5">
-                  What makes your products different?
+                  Do you work solo or with a team?
                 </AccordionTrigger>
                 <AccordionContent className="text-[14px] text-muted-foreground leading-relaxed pb-5">
-                  I focus on removing friction rather than adding features. Each product is built with simplicity, performance, and genuine user value at its core — no unnecessary complexity, just tools that work beautifully.
+                  I build products independently end-to-end — from product strategy and UX design to frontend and backend development. This gives me full control over quality and speed. For larger projects, I collaborate with designers and engineers I trust to bring specialized skills into the mix.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4" className="bg-white rounded-[14px] border border-black/5 px-5 mb-3">
                 <AccordionTrigger className="text-[15px] font-medium text-foreground hover:no-underline py-5">
-                  Can we collaborate on an idea?
+                  How do you decide which product to build next?
                 </AccordionTrigger>
                 <AccordionContent className="text-[14px] text-muted-foreground leading-relaxed pb-5">
-                  Absolutely. I love collaborating on meaningful projects. Whether you have a rough idea or a detailed plan, I am always open to discussing how we can turn concepts into impactful products together.
+                  I look for problems I personally experience or observe in daily life. If a task feels unnecessarily tedious, repetitive, or frustrating, that is a signal. I validate the idea with research, build a quick prototype, and test it with real users before committing to full development.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-5" className="bg-white rounded-[14px] border border-black/5 px-5">
+              <AccordionItem value="item-5" className="bg-white rounded-[14px] border border-black/5 px-5 mb-3">
                 <AccordionTrigger className="text-[15px] font-medium text-foreground hover:no-underline py-5">
-                  What is your mission as a product creator?
+                  What is your design philosophy?
                 </AccordionTrigger>
                 <AccordionContent className="text-[14px] text-muted-foreground leading-relaxed pb-5">
-                  My mission is simple: build software that helps people achieve more while spending less time on repetitive work. I believe technology should remove friction and empower users to focus on what truly matters.
+                  Less is more. Every screen, button, and interaction should serve a purpose. I draw inspiration from Apple and Stripe — clean interfaces, generous whitespace, and interactions that feel effortless. A great product disappears and lets the user focus on their work.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-6" className="bg-white rounded-[14px] border border-black/5 px-5">
+                <AccordionTrigger className="text-[15px] font-medium text-foreground hover:no-underline py-5">
+                  How do you handle product updates and user feedback?
+                </AccordionTrigger>
+                <AccordionContent className="text-[14px] text-muted-foreground leading-relaxed pb-5">
+                  I ship updates continuously — weekly or bi-weekly depending on the product. Every piece of feedback is logged and categorized. Bugs get fixed immediately. Feature requests go through a validation filter: does this help the majority of users? If yes, it gets prioritized into the next sprint.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
