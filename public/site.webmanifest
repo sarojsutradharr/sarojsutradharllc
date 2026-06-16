@@ -1,0 +1,21 @@
+{
+  "name": "Saroj Sutradhar LLC",
+  "short_name": "Saroj",
+  "icons": [
+    {
+      "src": "https://miaoda-conversation-file.s3cdn.medo.dev/user-cawzjr40f9xc/app-cbcy2gncy0ox/20260616/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://miaoda-conversation-file.s3cdn.medo.dev/user-cawzjr40f9xc/app-cbcy2gncy0ox/20260616/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#0d0d0d",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
