@@ -1,0 +1,180 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Inter font — closest open-source equivalent to SF Pro */
+@font-face {
+  font-family: 'Inter';
+  src: url('https://resource-static.bj.bcebos.com/fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* Apple-inspired color system */
+    --background: 0 0% 100%;
+    --foreground: 240 3% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 3% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 3% 12%;
+    --primary: 211 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 3% 12%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 3% 12%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 4% 84%;
+    --input: 240 4% 84%;
+    --ring: 211 100% 45%;
+    --chart-1: 211 100% 45%;
+    --chart-2: 211 100% 56%;
+    --chart-3: 240 3% 12%;
+    --chart-4: 0 0% 45%;
+    --chart-5: 240 5% 96%;
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Status colors */
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --info: 211 100% 45%;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: 'ss03';
+    color: hsl(var(--foreground));
+    background-color: hsl(var(--background));
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  /* Colorful gradient text like Apple Intelligence */
+  .gradient-text {
+    background: linear-gradient(90deg, #2997ff 0%, #bf5af2 35%, #ff375f 70%, #ff9500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Orange glow animation for headings */
+  .orange-glow {
+    color: #ff9500;
+    animation: orangePulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes orangePulse {
+    0%, 100% {
+      text-shadow: 0 0 8px rgba(255, 149, 0, 0.25), 0 0 20px rgba(255, 149, 0, 0.1);
+    }
+    50% {
+      text-shadow: 0 0 16px rgba(255, 149, 0, 0.5), 0 0 40px rgba(255, 149, 0, 0.2);
+    }
+  }
+
+  /* Mission section colorful hover effect */
+  .mission-colorful {
+    transition: background 0.6s ease;
+    background: linear-gradient(135deg, #272729 0%, #272729 100%);
+  }
+
+  .mission-colorful:hover {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #e94560 100%);
+  }
+
+  /* Horizontal scroll hide scrollbar */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Premium mission glow animations */
+  @keyframes missionMaskBreathe {
+    0%, 100% {
+      mask-size: 100% 100%;
+      -webkit-mask-size: 100% 100%;
+    }
+    50% {
+      mask-size: 110% 110%;
+      -webkit-mask-size: 110% 110%;
+    }
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      opacity: 0.6;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      opacity: 0.9;
+      transform: translate(-50%, -50%) scale(1.08);
+    }
+  }
+
+  @keyframes glowRotate {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+}
