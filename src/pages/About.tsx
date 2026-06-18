@@ -178,19 +178,16 @@ export default function About() {
         </div>
       </section>
 
-      {/* What I Do — Horizontal scroll cards with arrow buttons */}
+      {/* My Work — Horizontal scroll cards with arrow buttons */}
       <section className="bg-[#f5f5f7] py-20 md:py-24">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="flex flex-col gap-6 mb-10 md:mb-12">
+          <div className="flex items-center justify-between gap-6 mb-10 md:mb-12">
             <ScrollReveal className="flex-1 min-w-0">
               <h2 className="text-[28px] sm:text-[32px] md:text-[40px] font-semibold tracking-tight text-foreground">
-                What I Do
+                My Work
               </h2>
-              <p className="mt-3 sm:mt-4 text-[15px] md:text-[17px] text-muted-foreground leading-relaxed max-w-2xl">
-                The principles, vision, and approach that guide every product I build.
-              </p>
             </ScrollReveal>
-            <ScrollReveal delay={0.1} className="shrink-0 self-start">
+            <ScrollReveal delay={0.1} className="shrink-0">
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => scrollCards('left')}
