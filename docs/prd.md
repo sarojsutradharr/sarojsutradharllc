@@ -101,7 +101,7 @@ SarojSutradharLLC Website
 
 #### 3.2.11 Footer
 - Logo: SarojSutradharLLC
-- Tagline: \"Build. Solve. Improve.\"
+- Tagline: \"Build • Launch • Scale\"
 - Social links:
   - Twitter/X: https://x.com/SarojSutradhar
   - Website: https://sarojsutradharllc.com

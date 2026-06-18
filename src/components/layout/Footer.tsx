@@ -23,7 +23,7 @@ export default function Footer() {
               SarojSutradharLLC
             </Link>
             <p className="text-[13px] text-muted-foreground">
-              Build. Solve. Improve.
+              Build • Launch • Scale 
             </p>
             <div className="flex items-center gap-4 mt-2">
               <a
