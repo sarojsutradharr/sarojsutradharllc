@@ -724,6 +724,37 @@ export default function Home() {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Buy Me a Coffee Section */}
+      <section className="bg-[#f5f5f7] py-16 md:py-20">
+        <div className="max-w-[980px] mx-auto px-6 text-center">
+          <ScrollReveal>
+            <h2 className="text-[28px] md:text-[32px] font-semibold tracking-tight text-foreground">
+              Support My Work
+            </h2>
+            <p className="mt-4 text-[16px] md:text-[17px] text-muted-foreground leading-relaxed max-w-xl mx-auto">
+              If you enjoy my products and find them useful, your support helps me keep building and improving.
+            </p>
+            <div className="mt-8 flex items-center justify-center">
+              <a
+                href="https://www.buymeacoffee.com/sarojsutradharllc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 rounded-full px-6 py-3.5 text-[15px] font-medium transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
+                style={{
+                  backgroundColor: '#FFDD00',
+                  color: '#000000',
+                  border: '1.5px solid #000000',
+                  fontFamily: 'Cookie, cursive',
+                }}
+              >
+                <span className="text-[18px]">☕</span>
+                <span>Buy me a coffee</span>
+              </a>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
     </div>
   );
 }
