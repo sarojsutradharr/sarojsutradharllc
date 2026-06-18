@@ -84,7 +84,12 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-[13px] text-muted-foreground">Email</p>
-                      <p className="text-[14px] font-medium text-foreground">hello@sarojsutradharllc.com</p>
+                      <a
+                        href="mailto:hello@sarojsutradharllc.com"
+                        className="text-[14px] font-medium text-primary hover:underline"
+                      >
+                        hello@sarojsutradharllc.com
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
