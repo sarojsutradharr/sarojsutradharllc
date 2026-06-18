@@ -1,4 +1,5 @@
 import ScrollReveal from '@/components/ScrollReveal';
+import PageMeta from '@/components/common/PageMeta';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Code2, Lightbulb, Zap, TrendingUp, ArrowRight } from 'lucide-react';
@@ -33,6 +34,11 @@ const services = [
 export default function Services() {
   return (
     <div className="pt-[52px]">
+      <PageMeta
+        title="Services — SarojSutradharLLC | SaaS Product Development"
+        description="SaaS product development, product strategy, and growth-focused execution services. Build scalable software solutions that solve real problems and improve productivity."
+        keywords="saas product development, product strategy, business automation, workflow management, productivity solutions, cloud-based software, team collaboration, software as a service"
+      />
       {/* Hero */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-[980px] mx-auto px-6 text-center">

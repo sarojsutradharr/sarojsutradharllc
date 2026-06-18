@@ -1,4 +1,5 @@
 import ScrollReveal from '@/components/ScrollReveal';
+import PageMeta from '@/components/common/PageMeta';
 import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
 
@@ -32,6 +33,11 @@ const projects = [
 export default function Projects() {
   return (
     <div className="pt-[52px]">
+      <PageMeta
+        title="Projects — SarojSutradharLLC | SaaS Product Portfolio"
+        description="Explore SaaS products and software solutions built by SarojSutradharLLC. From business automation to productivity software, see real products that solve real problems."
+        keywords="saas product portfolio, saas products, business automation software, productivity software, workflow automation, cloud-based software, project management saas, ai saas platform"
+      />
       {/* Hero */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-[980px] mx-auto px-6 text-center">

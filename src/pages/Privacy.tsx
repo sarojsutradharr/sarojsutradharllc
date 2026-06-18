@@ -1,8 +1,13 @@
 import ScrollReveal from '@/components/ScrollReveal';
+import PageMeta from '@/components/common/PageMeta';
 
 export default function Privacy() {
   return (
     <div className="pt-[52px]">
+      <PageMeta
+        title="Privacy Policy — SarojSutradharLLC"
+        description="Privacy policy for SarojSutradharLLC. Learn how we collect, use, and protect your personal information on our SaaS product portfolio website."
+      />
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-[800px] mx-auto px-6">
           <ScrollReveal>

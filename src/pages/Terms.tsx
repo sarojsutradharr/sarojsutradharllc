@@ -1,8 +1,13 @@
 import ScrollReveal from '@/components/ScrollReveal';
+import PageMeta from '@/components/common/PageMeta';
 
 export default function Terms() {
   return (
     <div className="pt-[52px]">
+      <PageMeta
+        title="Terms & Conditions — SarojSutradharLLC"
+        description="Terms and conditions for using the SarojSutradharLLC website. Read our guidelines for accessing our SaaS product portfolio and services."
+      />
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-[800px] mx-auto px-6">
           <ScrollReveal>

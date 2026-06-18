@@ -5,6 +5,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import SEO from './pages/SEO';
 import type { ReactNode } from 'react';
 
 export interface RouteConfig {
@@ -21,6 +22,7 @@ export const routes: RouteConfig[] = [
   { name: 'Projects', path: '/projects', element: <Projects />, public: true },
   { name: 'Services', path: '/services', element: <Services />, public: true },
   { name: 'Contact', path: '/contact', element: <Contact />, public: true },
+  { name: 'SaaS Solutions', path: '/saas-solutions', element: <SEO />, public: true },
   { name: 'Privacy Policy', path: '/privacy', element: <Privacy />, public: true },
   { name: 'Terms & Conditions', path: '/terms', element: <Terms />, public: true },
 ];

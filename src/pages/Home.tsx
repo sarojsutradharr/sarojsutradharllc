@@ -15,6 +15,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import ScrollReveal from '@/components/ScrollReveal';
+import PageMeta from '@/components/common/PageMeta';
 import {
   Code2,
   Lightbulb,
@@ -245,6 +246,11 @@ export default function Home() {
 
   return (
     <div>
+      <PageMeta
+        title="SarojSutradharLLC — SaaS Product Builder & Entrepreneur"
+        description="I build SaaS products that solve real problems, save time, and improve productivity. Explore my portfolio of business automation software, productivity tools, and cloud-based solutions."
+        keywords="saas product, saas product development, business automation software, productivity software, ai saas platform, workflow management software, cloud-based software, team collaboration software, project management saas, business productivity tools, software as a service platform, small business saas software, saas tools for startups, time saving saas tools"
+      />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center bg-white pt-[52px]">
         <div className="max-w-[1200px] mx-auto px-6 py-20 w-full">
@@ -636,50 +642,50 @@ export default function Home() {
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1" className="bg-white rounded-[14px] border border-black/5 px-5 mb-3">
                 <AccordionTrigger className="text-[15px] font-medium text-foreground hover:no-underline py-5">
-                  What technologies do you use to build products?
+                  What is a SaaS product and why does it matter?
                 </AccordionTrigger>
                 <AccordionContent className="text-[14px] text-muted-foreground leading-relaxed pb-5">
-                  I primarily work with React, TypeScript, and modern frontend frameworks like Next.js for web products. For backend and data, I use Supabase, Node.js, and cloud services. I choose the right stack for each product — performance, scalability, and maintainability always come first.
+                  A SaaS (Software as a Service) product is software hosted in the cloud that users can access from any device via the internet. Unlike traditional software that requires installation and maintenance, SaaS products are always up-to-date, accessible anywhere, and scale effortlessly with your business. They are the foundation of modern productivity and the most cost-effective way to solve business problems.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2" className="bg-white rounded-[14px] border border-black/5 px-5 mb-3">
                 <AccordionTrigger className="text-[15px] font-medium text-foreground hover:no-underline py-5">
-                  How long does it take to build a product from idea to launch?
+                  What is your approach to SaaS product development?
                 </AccordionTrigger>
                 <AccordionContent className="text-[14px] text-muted-foreground leading-relaxed pb-5">
-                  It depends on the scope. A focused MVP typically takes 4 to 8 weeks from concept to first users. I break work into weekly milestones with clear deliverables — design first, build fast, and iterate based on real user feedback. Speed matters, but never at the cost of quality.
+                  I follow a user-first methodology: identify a real problem, validate the solution with a prototype, design an intuitive experience, build with clean architecture, and iterate based on real user feedback. Every product starts with deep research into user pain points — because the best SaaS products are not the ones with the most features, but the ones that solve the most painful problems.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3" className="bg-white rounded-[14px] border border-black/5 px-5 mb-3">
                 <AccordionTrigger className="text-[15px] font-medium text-foreground hover:no-underline py-5">
-                  Do you work solo or with a team?
+                  How do you build problem-solving SaaS products?
                 </AccordionTrigger>
                 <AccordionContent className="text-[14px] text-muted-foreground leading-relaxed pb-5">
-                  I build products independently end-to-end — from product strategy and UX design to frontend and backend development. This gives me full control over quality and speed. For larger projects, I collaborate with designers and engineers I trust to bring specialized skills into the mix.
+                  I start by observing friction in daily workflows — tasks that take too long, processes that are unnecessarily complex, or tools that do not talk to each other. Then I build cloud-based software that eliminates that friction. Whether it is workflow automation, team collaboration, or AI-powered productivity tools, every feature is designed to save time and deliver the best output.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4" className="bg-white rounded-[14px] border border-black/5 px-5 mb-3">
                 <AccordionTrigger className="text-[15px] font-medium text-foreground hover:no-underline py-5">
-                  How do you decide which product to build next?
+                  What makes your SaaS solutions different?
                 </AccordionTrigger>
                 <AccordionContent className="text-[14px] text-muted-foreground leading-relaxed pb-5">
-                  I look for problems I personally experience or observe in daily life. If a task feels unnecessarily tedious, repetitive, or frustrating, that is a signal. I validate the idea with research, build a quick prototype, and test it with real users before committing to full development.
+                  I build with the same obsessive attention to detail that defines Apple products. Clean interfaces, zero unnecessary complexity, and interactions that feel effortless. My SaaS products are not just functional — they are delightful to use. I also integrate AI where it genuinely helps, automate what can be automated, and ensure every product is built for long-term scalability.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5" className="bg-white rounded-[14px] border border-black/5 px-5 mb-3">
                 <AccordionTrigger className="text-[15px] font-medium text-foreground hover:no-underline py-5">
-                  What is your design philosophy?
+                  How long does it take to build a SaaS product from idea to launch?
                 </AccordionTrigger>
                 <AccordionContent className="text-[14px] text-muted-foreground leading-relaxed pb-5">
-                  Less is more. Every screen, button, and interaction should serve a purpose. I draw inspiration from Apple and Stripe — clean interfaces, generous whitespace, and interactions that feel effortless. A great product disappears and lets the user focus on their work.
+                  A focused SaaS MVP typically takes 4 to 8 weeks from concept to first users. The timeline depends on complexity, integrations, and scope. I break every project into weekly milestones with clear deliverables — design first, build fast, and iterate based on real feedback. Speed matters, but never at the cost of quality or user experience.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-6" className="bg-white rounded-[14px] border border-black/5 px-5">
                 <AccordionTrigger className="text-[15px] font-medium text-foreground hover:no-underline py-5">
-                  How do you handle product updates and user feedback?
+                  Do you work with startups and small businesses?
                 </AccordionTrigger>
                 <AccordionContent className="text-[14px] text-muted-foreground leading-relaxed pb-5">
-                  I ship updates continuously — weekly or bi-weekly depending on the product. Every piece of feedback is logged and categorized. Bugs get fixed immediately. Feature requests go through a validation filter: does this help the majority of users? If yes, it gets prioritized into the next sprint.
+                  Yes. I specialize in SaaS tools for startups and small businesses that need affordable, scalable solutions. From business automation software to workflow management platforms, I help companies of all sizes reduce manual work, improve team productivity, and focus on what matters most — growing their business.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

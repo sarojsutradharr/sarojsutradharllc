@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ScrollReveal from '@/components/ScrollReveal';
+import PageMeta from '@/components/common/PageMeta';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -44,6 +45,11 @@ export default function Contact() {
 
   return (
     <div className="pt-[52px]">
+      <PageMeta
+        title="Contact — SarojSutradharLLC | Let's Build Something Useful"
+        description="Get in touch with SarojSutradharLLC for SaaS product development, collaboration, or discussing your next idea. I respond within 24-48 hours."
+        keywords="contact saas developer, saas product collaboration, hire saas developer, business automation consultant, productivity software, workflow management, cloud-based software"
+      />
       {/* Hero */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-[980px] mx-auto px-6 text-center">

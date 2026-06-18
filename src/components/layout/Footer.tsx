@@ -7,6 +7,7 @@ const footerLinks = [
   { name: 'Projects', path: '/projects' },
   { name: 'Services', path: '/services' },
   { name: 'Contact', path: '/contact' },
+  { name: 'SaaS Solutions', path: '/saas-solutions' },
   { name: 'Privacy Policy', path: '/privacy' },
   { name: 'Terms of Service', path: '/terms' },
 ];

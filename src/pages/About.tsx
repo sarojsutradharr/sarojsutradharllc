@@ -1,9 +1,15 @@
 import ScrollReveal from '@/components/ScrollReveal';
+import PageMeta from '@/components/common/PageMeta';
 import { Target, Eye, Briefcase } from 'lucide-react';
 
 export default function About() {
   return (
     <div className="pt-[52px]">
+      <PageMeta
+        title="About — SarojSutradharLLC | SaaS Product Builder & Entrepreneur"
+        description="Learn about Saroj Sutradhar, founder of SarojSutradharLLC. A dedicated entrepreneur building SaaS products, business automation software, and productivity tools that solve real problems."
+        keywords="saas product builder, entrepreneur, product creator, business automation, workflow management, saas development, problem solving saas, time saving tools"
+      />
       {/* Hero */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-[980px] mx-auto px-6 text-center">
