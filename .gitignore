@@ -13,6 +13,11 @@ dist-ssr
 output
 *.local
 package-lock.json
+
+# Environment variables
+.env
+.env.local
+.env.*.local
 playwright-report
 test-results
 
