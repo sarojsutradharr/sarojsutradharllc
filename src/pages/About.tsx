@@ -258,6 +258,9 @@ export default function About() {
       {/* Detail Dialog with colorful highlighted text */}
       <Dialog open={!!activeCard} onOpenChange={() => setActiveCard(null)}>
         <DialogContent className="max-w-[calc(100%-2rem)] md:max-w-xl rounded-[20px] p-0 overflow-hidden border-0 shadow-[0_25px_80px_rgba(0,0,0,0.2)] bg-white">
+          <DialogTitle className="sr-only">
+            {activeCard ? activeCard.label : 'Details'}
+          </DialogTitle>
           {activeCard && (
             <div className="bg-white">
               <div className="p-7 md:p-10">
@@ -267,7 +270,7 @@ export default function About() {
                       <activeCard.icon className="h-6 w-6 text-[#2997ff]" strokeWidth={1.5} />
                     </div>
                     <div>
-                      <DialogTitle className="text-[26px] font-semibold tracking-tight text-foreground capitalize">
+                      <DialogTitle className="text-[26px] font-semibold tracking-tight text-foreground capitalize" aria-hidden="true">
                         {activeCard.id}
                       </DialogTitle>
                       <DialogDescription className="text-[13px] text-muted-foreground leading-relaxed mt-1">

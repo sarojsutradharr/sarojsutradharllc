@@ -457,6 +457,9 @@ export default function Home() {
         {/* Process Step Dialog — White popup with colored background highlights */}
         <Dialog open={!!activeStep} onOpenChange={() => setActiveStep(null)}>
           <DialogContent className="max-w-[calc(100%-2rem)] md:max-w-xl rounded-[20px] p-0 overflow-hidden border-0 shadow-[0_25px_80px_rgba(0,0,0,0.2)] bg-white">
+            <DialogTitle className="sr-only">
+              {activeStep ? activeStep.title : 'Process Step'}
+            </DialogTitle>
             {activeStep && (
               <div className="bg-white">
                 <div className="p-7 md:p-10">
@@ -466,7 +469,7 @@ export default function Home() {
                         <activeStep.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
                       </div>
                       <div>
-                        <DialogTitle className="text-[26px] font-semibold tracking-tight text-foreground">
+                        <DialogTitle className="text-[26px] font-semibold tracking-tight text-foreground" aria-hidden="true">
                           {activeStep.title}
                         </DialogTitle>
                         <DialogDescription className="text-[13px] text-muted-foreground leading-relaxed mt-1">
