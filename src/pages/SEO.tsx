@@ -21,7 +21,7 @@ export default function SEO() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="mt-12 flex flex-col gap-8 text-[15px] md:text-[16px] text-muted-foreground leading-[1.8]">
+            <div className="mt-12 flex flex-col gap-8 text-[15px] md:text-[16px] text-foreground leading-[1.8]">
               <p>
                 Welcome to <strong>SarojSutradharLLC</strong>, where we specialize in building <strong>SaaS products</strong> that solve real-world problems. Whether you are wondering <em>what is a SaaS product</em> or looking for <strong>problem solving SaaS</strong> solutions, you have come to the right place. Our mission is to create software that saves time, improves productivity, and delivers the <strong>best output</strong> for businesses and individuals alike.
               </p>
